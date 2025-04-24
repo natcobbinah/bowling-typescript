@@ -11,6 +11,11 @@ describe('test', function () {
         const bowling = new Bowling()
         expect(bowling.generate_bowling_score_for_points_and_misses("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-")).toBe(90)
     });
+
+    it('5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5 should return 150', () => {
+        const bowling = new Bowling()
+        expect(bowling.generate_bowling_score_for_pairs_and_spare_with_final("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5")).toBe(150)
+    });
 })
 
 
