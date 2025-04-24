@@ -1,4 +1,13 @@
 import {FizzBuzz} from "./fizzBuzz";
+import { Bowling } from "./bowling";
+
+describe('test', function () {
+    it('X X X X X X X X X X X X should return 300', () => {
+        const bowling = new Bowling()
+        expect(bowling.generate_bowling_score_for_complete_strikes_game("X X X X X X X X X X X X")).toBe(300)
+    });
+})
+
 
 describe('test', function () {
 
@@ -32,6 +41,4 @@ describe('test', function () {
         const fizzBuzz = new FizzBuzz()
         expect(fizzBuzz.calculate(16)).toBe('12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz16');
     })
-
-
 });
