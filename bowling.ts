@@ -15,7 +15,8 @@ export class Bowling {
         let bowling_score_counter:number = 0;
 
         while(startloopIndex <= bowling_sequence_array.length){
-            if(bowling_sequence_array[startpointer] === "X"  && 
+            if(bowling_sequence_array[startpointer] === "X"  &&
+                startpointer <= 10 &&
                 bowling_sequence_array[nextpointer] === "X" && 
                 bowling_sequence_array[nextpointer + 1]
             ){
