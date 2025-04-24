@@ -33,4 +33,34 @@ export class Bowling {
         
         return bowling_score_counter;
     }
+
+    generate_bowling_score_for_points_and_misses(bowling_sequence: string):number{
+
+        //get bowling sequence length
+        let bowling_sequence_length = bowling_sequence.length;
+
+        //define bowling score counter
+        let bowling_score_result:number = 0;
+
+        let loopIndex = 0;
+        let bowling_sequence_array: string[] = []
+
+        while (loopIndex < bowling_sequence_length){
+            if(bowling_sequence.at(loopIndex) !== '-'){
+                bowling_sequence_array.push(bowling_sequence.charAt(loopIndex))
+              }
+              loopIndex = loopIndex + 1;
+        }
+
+        console.log(bowling_sequence_array)
+
+        for(let i=0;  i < bowling_sequence_array.length; i++){
+            if(bowling_sequence_array[i] !== " "){
+                //console.log(bowling_sequence_array[i])
+                bowling_score_result += parseInt(bowling_sequence_array[i]);
+            }
+        }
+
+        return bowling_score_result;
+    }
 }

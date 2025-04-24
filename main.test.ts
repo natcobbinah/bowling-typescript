@@ -6,6 +6,11 @@ describe('test', function () {
         const bowling = new Bowling()
         expect(bowling.generate_bowling_score_for_complete_strikes_game("X X X X X X X X X X X X")).toBe(300)
     });
+
+    it('9- 9- 9- 9- 9- 9- 9- 9- 9- 9- should return 90', () => {
+        const bowling = new Bowling()
+        expect(bowling.generate_bowling_score_for_points_and_misses("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-")).toBe(90)
+    });
 })
 
 
